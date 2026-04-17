@@ -1,0 +1,73 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height:100vh;
+    background:gray;
+    background-image: url(img/CEERS11.jpg);
+    background-size: cover;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >.solar{
+        width: 600px;
+        height: 600px;
+        /* border: 1px solid red; */
+        position: relative;
+        transform-style: preserve-3d;
+        >*{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+        }
+        >.orbit{
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(255, 255, 255, 0.679);
+            transform:translate(-50%, -50%) rotateX(75deg);
+        }
+        >.sun{
+            width: 180px;
+            height: 180px;
+            background-color: goldenrod;
+            box-shadow: 0 0 100px 1px rgba(218, 165, 32, 0.812);
+        }
+        >.earth{
+            width: 100px;
+            height: 100px;
+            left: -50px;
+            transform: translate(0,-50px) rotateX(-15deg);
+            transform-origin: 350px 50%;
+            animation: orbit 10s linear infinite;
+            transform-style: preserve-3d;
+            >div{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-image: url(img/Large_World_Map_bright.jpg);
+                background-size: auto 100%;
+                box-shadow: 0 0 10px 2px black;
+                animation: div 10s linear infinite;
+            }
+        }
+    }
+}
+@keyframes orbit{
+    to{
+        transform: translate(0,-50px) rotateX(-15deg) rotateY(360deg);
+    }
+}
+@keyframes div{
+    to{
+        transform: rotateY(-360deg);
+        background-position: -100px 0;
+    }
+}
