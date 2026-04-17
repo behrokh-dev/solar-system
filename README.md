@@ -4,6 +4,8 @@ This project is a front-end animation demo that visualizes a simplified solar sy
 
 🔗 **Live Demo:**
 https://behrokh-dev.github.io/solar-system/
+---
+<img width="1907" height="864" alt="Image" src="https://github.com/user-attachments/assets/a67d95ac-2801-4dfb-850e-afe6e69a64e1" />
 
 ---
 
